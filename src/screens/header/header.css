@@ -1,0 +1,127 @@
+.Header{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    height: 4rem;
+   position: sticky;
+   top: 0px;
+   z-index: 1;
+   background-color: #242424;
+    
+}
+.h-Logo{
+    flex:1;
+    text-align: center;
+}
+.h-search{
+    flex: 3;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    
+
+}
+.h-search form{
+    background-color: #2a2a2a;
+    border: 0;
+    border-radius: 500px;
+    color: #fff!important;
+    height: 100%;
+    text-overflow: ellipsis;
+    width: 60%;
+    display: flex;
+    padding-left: 5px;
+}
+.h-search form:focus-within{
+    border: 2px solid #fff;
+    
+}
+.h-search form a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.h-search form  button{
+    background: transparent;
+    outline: none;
+    border: none;
+    color: #b3b3b3;
+}
+.h-search form:hover{
+    background-color: #2a2a2a;
+    -webkit-box-shadow: 0 0 0 1px hsla(0,0%,100%,.2);
+    box-shadow: 0 0 0 1px hsla(0,0%,100%,.2);
+    outline: none;
+}
+.h-search form input{
+    background-color: #2a2a2a;
+    border: 0;
+    border-radius: 500px;
+    color: #fff!important;
+    height: 48px;
+    text-overflow: ellipsis;
+    width: 90%;
+    outline: none;
+    font-family: CircularSp,CircularSp-Arab,CircularSp-Hebr,CircularSp-Cyrl,CircularSp-Grek,CircularSp-Deva,var(--fallback-fonts,sans-serif);
+    font-weight: 400;
+    font-size: 0.875rem;
+
+}
+.h-user{
+    flex:0.6;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2px;
+}
+
+
+.h-SignIn{
+    flex: 1;
+}
+.h-SignIn button{
+    height: 48px;
+    background-color: rgb(203, 199, 199);
+    color:#242424;
+    font-family: CircularSp,CircularSp-Arab,CircularSp-Hebr,CircularSp-Cyrl,CircularSp-Grek,CircularSp-Deva,var(--fallback-fonts,sans-serif);
+    font-weight: 600;
+    font-size: 0.875rem;
+    outline: none;
+    border: none;
+    border-radius: 500px;
+    width: 45%;
+}
+.h-SignIn button:hover{
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid black;
+}
+
+
+.h-search select {
+    background-color: #2a2a2a;
+    border: 0;
+    border-radius: 500px;
+    color: #fff;
+    height: 30px;
+    text-overflow: ellipsis;
+    width: 20%;
+    outline: none;
+    font-weight: 400;
+    font-size: 0.875rem;
+    text-align: center;
+    padding: 5px;
+    
+  }
+  
+  .h-search select:hover {
+    cursor: pointer;
+    background-color: #2a2a2a;
+    -webkit-box-shadow: 0 0 0 1px hsla(0, 0%, 100%, .2);
+    box-shadow: 0 0 0 1px hsla(0, 0%, 100%, .2);
+    outline: none;
+  }
+ 
+  

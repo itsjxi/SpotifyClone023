@@ -1,0 +1,114 @@
+
+.playlist-info {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+   
+  }
+  .moreAboutPlaylist{
+    display: flex;
+    align-items: center;
+    
+  }
+  .moreAboutPlaylist span{
+    padding: 2px;
+  }
+
+  .playlis-image-details{
+    display: flex;
+    align-items: end;
+  }
+  .playlist-buttons{
+    width: 15%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem
+  }
+  
+  
+  .playlist-image img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+   
+  }
+  
+  .playlist-details {
+    margin-left: 20px;
+  }
+  .track-list link{
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .playlist-details h1 {
+    font-size: 60px;
+    font-weight:1000;
+    margin-bottom: 5px;
+  }
+  
+  .playlist-details p {
+    font-size: 16px;
+    margin: 8px 0;
+  }
+  
+ 
+  .track-list {
+    background-color: #121212;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .track-list h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  
+  thead th {
+    padding: 10px;
+    font-weight: bold;
+    text-align: left;
+    color: #b3b3b3
+  }
+  
+  tbody tr {
+    border-top: 1px solid #333;
+  }
+  tbody tr:hover{
+    background-color: #333;
+    cursor: pointer;
+  }
+  tbody td {
+    padding: 10px;
+  }
+  
+  td img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  td div {
+    display: inline-block;
+    margin-left: 10px;
+  }
+  
+  td div p {
+    margin: 0;
+  }
+  

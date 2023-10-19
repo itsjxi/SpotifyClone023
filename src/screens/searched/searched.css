@@ -1,0 +1,68 @@
+.searched{
+    display: flex;
+    flex-direction: column;
+    /* grid-template-columns: repeat(4, 1fr); */
+    gap: 1rem;
+    justify-self: center;
+    padding: 1rem;
+ 
+    
+}
+.seached-type{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    justify-self: center;
+    padding: 1rem;
+
+}
+
+.searchedBlock{
+    background-color: #181818;
+    width: 100%;
+    height: 300px;
+    position: relative;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+
+}
+.searchedBlock:hover{
+    background-color: #2e2d2d;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.searchedBlock img{
+    width: 160px;
+    height:160px;
+    padding: 0px;
+    margin: 0px;
+    border-radius: 50%;
+    border: 1px solid white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.searchedBlock svg{
+    position: absolute;
+    top: 150px;
+    left:130px
+}
+.aboutSearch{
+    width: 100%;
+    padding: 1rem;
+}
+.searched_Name{
+    font-weight: 600;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: start;
+}
+.searched_Type{
+    font-weight: 400;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(171, 167, 167);
+    text-align: start;
+
+}

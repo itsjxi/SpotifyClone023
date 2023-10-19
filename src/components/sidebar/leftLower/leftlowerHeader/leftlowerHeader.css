@@ -1,0 +1,73 @@
+
+.left_lo_Header{
+    width: 100%;
+    position: sticky;
+    top: 0px;
+    padding: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    gap: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    background-color: #1c1c1c;
+}
+
+
+.LibraryButton{
+    font-size: 1rem;
+    display: flex;
+    flex: 3;
+    justify-content: space-evenly;
+    align-items: center;
+    font-weight: 700;
+    background: transparent;
+    outline: none;
+    border: none;
+    color: rgb(171, 167, 167);
+    font-family: var(--font-family,CircularSp,CircularSp-Arab,CircularSp-Hebr,CircularSp-Cyrl,CircularSp-Grek,CircularSp-Deva,var(--fallback-fonts,sans-serif));
+}
+.LibraryButton:hover{
+    color: white;
+}
+.libraryheaderUpper{
+    display: flex;
+    gap: 1rem;
+}
+.libraryheaderUpper div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0.3;
+    padding: 0.5rem;
+    border-radius: 50%;
+   
+
+}
+.libraryheaderUpper div:hover{
+    background-color: hsla(0,0%,100%,.1);
+    color: white;
+}
+
+.libraryheaderLower{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: start;
+    padding: 1rem;
+}
+.libraryheaderLower div{
+  font-weight: 400;
+  font-size: 0.85rem;
+  background-color: #292929;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  color: white;
+  font-family: var(--font-family,CircularSp,CircularSp-Arab,CircularSp-Hebr,CircularSp-Cyrl,CircularSp-Grek,CircularSp-Deva,var(--fallback-fonts,sans-serif));
+  line-height: 1;
+    letter-spacing: 0.5px;
+}
+.libraryheaderLower div:hover{
+    cursor: pointer;
+}
+

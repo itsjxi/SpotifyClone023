@@ -1,0 +1,55 @@
+
+.searched-type{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+
+.album-item {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+
+.album-item img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+
+.album-item h3,
+.album-item p {
+    color: #fff;
+    margin: 10px 0;
+}
+
+
+.album-item p:last-child {
+    color: #888;
+}
+
+
+.album-item .play-button {
+    background-color: #1DB954;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+    cursor: pointer;
+}
+
+.album-item .play-button:hover {
+    background-color: #1AA048;
+}

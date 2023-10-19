@@ -1,0 +1,31 @@
+.main_Body{
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    margin: 0px;
+    gap: 1rem
+}
+.right_SideBar{
+    flex: 3;
+    background-color: #1c1c1c;
+    border-radius: 1rem;
+    overflow-y:scroll;
+   
+}
+::-webkit-scrollbar {
+    width: 16px;
+    height: 20px;
+    
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #302f2f;
+    
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3e3d3d;
+  }
+
