@@ -23,7 +23,7 @@ import { useSearchResults } from '../../context/searchedContext';
 import "./header.css"
 
 function Header() {
-  const CLIENT_ID = 'c8d93fee0b2846dc9fc36bafb7fd1c34';
+  const CLIENT_ID = '7bdfde888d4c4769a8ea1098483fd0f7';
   const REDIRECT_URI = 'https://musicappspotify023.netlify.app/';
   const AUTH_ENDPOINT = 'https://accounts.spotify.com/authorize';
   const RESPONSE_TYPE = 'token';
