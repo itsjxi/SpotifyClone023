@@ -24,7 +24,7 @@ import "./header.css"
 
 function Header() {
   const CLIENT_ID = 'c8d93fee0b2846dc9fc36bafb7fd1c34';
-  const REDIRECT_URI = 'http://localhost:5173/';
+  const REDIRECT_URI = 'https://musicappspotify023.netlify.app/';
   const AUTH_ENDPOINT = 'https://accounts.spotify.com/authorize';
   const RESPONSE_TYPE = 'token';
 
