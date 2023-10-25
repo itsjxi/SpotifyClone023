@@ -1,57 +1,6 @@
-/* 
-.footer-player {
-    background-color: #1d1c1c; 
-    padding: 10px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    color: white;
-    border-radius: 10px;
-    margin-top: 1rem;
-  }
-  
- 
-  .track-info {
-    display: flex;
-    flex:1;
-    align-items: center;
-  }
-  
-  .track-info img {
-    width: 60px;
-    height: 60px;
-    margin-right: 10px;
-  }
-  
-  .track-info h3 {
-    margin: 0;
-    font-size: 18px;
-  }
-  
-  .track-info p {
-    margin: 0;
-  }
- 
-  .audio-player {
-    display: flex;
-    flex: 2;
-    flex-direction: column;
-    align-items: start;
-    justify-content: start;
-  }
-  
-  .audio-player p {
-    margin: 5px 0;
-  }
-  
- 
-  audio {
-    width: 60%;
-  } */
 
-  /* CustomAudioPlayer.css */
 .custom-audio-player {
-  background-color: #333;
+  background-color:  #121212;
   color: #fff;
   border-radius: 8px;
   padding: 10px;
@@ -59,13 +8,17 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  /* position: fixed;
+  bottom: 0px; */
+  width: 100%;
+  height: 180px;
 }
 
 .controls {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 60%;
+  width: 40%;
 
 }
 
@@ -79,7 +32,7 @@
 }
 
 .play-pause-button {
- color: #1db954;
+ color: #f2f9f5;
  background-color: transparent;
   border-radius: 50%;
   font-size: 50px;
@@ -115,6 +68,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+   gap: 10px;
 }
 
 
@@ -124,10 +78,11 @@
 }
 
 .upcoming-tracks {
-  text-align: center;
+  text-align: left;
   margin-top: 20px;
+  margin-left: 20px;
+  flex: 1.4
 
-  flex: 1
 }
 
 h4 {
@@ -141,14 +96,21 @@ ul {
 
 li {
   margin: 5px 0;
+  display: flex;
+  align-items: center;
 }
+.upcoming-tracks ul li span{
+  margin-right: 20px;
+}
+
 
 .audio-progress {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   width: 100%;
-  margin-top: 20px;
+  height: 30px;
+
 }
 
 .current-time , .duration{
@@ -160,13 +122,14 @@ li {
   height: 4px;
   background-color: #555;
   position: relative;
-  width: 80%;
+  
+  
 }
 
 .progress {
   height: 100%;
   width: 0;
-  background-color: #1db954;
+  background-color: white;
 }
 
   

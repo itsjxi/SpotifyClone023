@@ -1,0 +1,27 @@
+
+.search-type-container {
+    display: flex;
+    border: 1px solid #888; 
+    border-radius: 5px;
+    margin: 10px 0;
+    overflow: hidden;
+  }
+  
+  .search-type {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .search-type.selected {
+    background-color: #1DB954;
+    color: white;
+  }
+  
+  .search-type:hover {
+    background-color: #888;
+    color: white;
+  }
+  
+ 
+  

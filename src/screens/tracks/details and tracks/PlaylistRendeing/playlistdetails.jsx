@@ -17,8 +17,19 @@ function calculateTotalDuration(tracks) {
   }
 
 export default function PlaylistDetails({ playlist }) {
+  // function generateRandomColor() {
+  //   const letters = '0123456789ABCDEF';
+  //   let color = '#';
+  //   for (let i = 0; i < 6; i++) {
+  //     color += letters[Math.floor(Math.random() * 16)];
+  //   }
+  //   return color;
+  // }
+
+  // let groundColor =  generateRandomColor()
+
   return (
-    <div className="playlist-details">
+    <div className="playlist-details" >
         <div className="playlis-image-details">
       <div className="playlist-image">
         <img src={playlist.images[0].url} alt={playlist.name} />

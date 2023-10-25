@@ -7,21 +7,23 @@ import { PlayButton } from '../../shared/playButton';
 import { Switch, Route, useRouteMatch } from 'react-router-dom';
 import ArtistResults from './ArtistResults/ArtistResults';
 import AlbumResults from './AlbumResults/AlbumResults';
-import HomePlayLists from '../HomePlaylists';
+import HomePlayLists from '../playlists/HomePlaylists';
 import TrackResults from './TracksResults/TracksResults';
 import PlaylistDetails from '../tracks/details and tracks/PlaylistRendeing/playlistdetails';
+import SearchType from './searchedType/seachType';
+import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
 
 export default function SearchedField() {
   const { path } = useRouteMatch();
-  console.log("00000000000000000")
   const { searchKey, searchType } = useSearchResults();
   const [searchData, setSearchedData] = useState([]);
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [selectedType, setSelectedType] = useState("all");
+ 
 
   console.log(searchKey,searchData)
   useEffect(() => {
     searchedData();
-    console.log(searchData,"ye naya data hai")
   }, [searchKey, searchType]);
 
   const combinedSearchTypes = ['album', 'artist', 'playlist', 'track','episode','show','audiobook'].join(',');
@@ -50,35 +52,61 @@ export default function SearchedField() {
     setHoveredIndex(null);
   }
 
+  const renderResults = () => {
+    if (selectedType === 'all') {
+  
+      return (
+        <div>
+          {searchData.albums && (
+            <AlbumResults data={searchData.albums.items.slice(0,4)} hoveredIndex={hoveredIndex} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave} />
+          )}
+
+          {searchData.artists && (
+            <ArtistResults data={searchData.artists.items.slice(0,4)} hoveredIndex={hoveredIndex} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave} />
+          )}
+
+          {searchData.tracks && (
+            <TrackResults data={searchData.tracks.items.slice(0,4)} hoveredIndex={hoveredIndex} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave} />
+          )}
+
+          {searchData.playlists && (
+            <HomePlayLists data={searchData.playlists.items.slice(0,4)} />
+          )}
+        </div>
+      );
+    } else {
+      if (selectedType === 'album' && searchData.albums) {
+        return (
+          <AlbumResults data={searchData.albums.items} hoveredIndex={hoveredIndex} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave} />
+        );
+      } else if (selectedType === 'artist' && searchData.artists) {
+        return (
+          <ArtistResults data={searchData.artists.items} hoveredIndex={hoveredIndex} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave} />
+        );
+      } else if (selectedType === 'track' && searchData.tracks) {
+        return (
+          <TrackResults data={searchData.tracks.items} hoveredIndex={hoveredIndex} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave} />
+        );
+      } else if (selectedType === 'playlist' && searchData.playlists) {
+        return (
+          <HomePlayLists data={searchData.playlists.items} />
+        );
+      }
+      
+    }
+  }
+
   return (
     <div>
-      <h2>Search Results:</h2>
+          <h2>Search Results: {searchKey}</h2>
+      <SearchType
+        types={["all" , ...combinedSearchTypes.split(",")]}
+        selectedType={selectedType}
+        onSelectType={setSelectedType}
+      />
       <div className="searched">
-
- 
-    
-
-        
-      {/* {searchData.albums && (
-          <AlbumResults data={searchData.albums.items} hoveredIndex={hoveredIndex} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave} />
-        )}
-     
-    
-    {searchData.artists && (
-          <ArtistResults data={searchData.artists.items} hoveredIndex={hoveredIndex} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave} />
-        )}
-
-{searchData.tracks && (
-          <TrackResults data={searchData.tracks.items} hoveredIndex={hoveredIndex} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave} />
-        )} */}
-     
-      {searchData.playlists && (
-        
-        
-        <HomePlayLists data={searchData.playlists.items}/>
-
-      )}
-       </div>
+        {renderResults()}
+      </div>
       </div>
   
   );

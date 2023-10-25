@@ -86,6 +86,7 @@ function Header() {
 
     setSearchKey(searchValue);
     setSearchType(searchTypeRef.current.value);
+    inputRef.current.value = ''
   };
 
   return (
@@ -104,14 +105,6 @@ function Header() {
             </Link>
             <input ref={inputRef} type="text" name="search" placeholder="What do you want to listen to?" />
           </form>
-          {/* <select className="horizontal-select" ref={searchTypeRef}>
-              <option value="album">album</option>
-              <option value="artist">artist</option>
-              <option value="playlist">playlist</option>
-              <option value="track">track</option>
-              <option value="show">show</option>
-              <option value="episode">episode</option>
-            </select> */}
         </div>
 
       

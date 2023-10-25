@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = 'https://api.spotify.com/v1'; // You can change this base URL as needed
+const BASE_URL = 'https://api.spotify.com/v1'; 
 
 const getToken = () => {
   const token = localStorage.getItem('token');

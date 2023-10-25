@@ -20,6 +20,7 @@ function formatDuration(durationMs) {
 
 export default function TrackList({ tracks }) {
     const { setTrackId } = useTrackId();
+    console.log(tracks,"commntracks ")
 const handleTrackClick = (trackId) => {
    
     setTrackId(trackId);
