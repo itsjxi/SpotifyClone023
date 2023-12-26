@@ -1,3 +1,4 @@
+import "./FooterPlayer.css";
 import React, { useEffect, useState, useRef } from "react";
 import { useSearchResults } from "../../context/searchedContext";
 import { useTrackId } from "../tracks/details and tracks/tracks/trackidContext";
@@ -6,7 +7,7 @@ import TrackInfo from "./TrackInfo";
 import Controls from "./Controls";
 import UpcomingTracks from "./UpcomingTracks";
 import Loader from "../../shared/Loader/loader";
-import "./FooterPlayer.css";
+
 
 const FooterPlayer = () => {
   const { tracks } = useSearchResults();
