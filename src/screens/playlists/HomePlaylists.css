@@ -1,4 +1,4 @@
-/* Style the container for the playlist items */
+
 .playlist-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
