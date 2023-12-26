@@ -1,14 +1,4 @@
-// import { useState ,useEffect, useRef} from 'react'
-// import axios from 'axios'
-// import "./header.css"
-// import { FiSearch } from "react-icons/fi";
-// import SpotifyLogo from "../../images/SpotifyLogo.png"
-// import { fetchData } from '../../ApiData/Api';
-// import { FaUserAlt } from 'react-icons/fa';
-// import SearchedField from '../searched/searched';
-// import { Link } from 'react-router-dom';
-// import { useSearchResults } from '../../context/searchedContext';
-// import SearchType from './typeofSeach/searchtype';
+
 
 
 import React, { useReducer, useRef, useState, useEffect } from 'react';
@@ -24,7 +14,7 @@ import "./header.css"
 
 function Header() {
   const CLIENT_ID = '7bdfde888d4c4769a8ea1098483fd0f7';
-  const REDIRECT_URI = 'https://musicappspotify023.netlify.app/';
+  const REDIRECT_URI = 'http://localhost:5173/';
   const AUTH_ENDPOINT = 'https://accounts.spotify.com/authorize';
   const RESPONSE_TYPE = 'token';
 
