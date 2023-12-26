@@ -1,4 +1,4 @@
-import "./FooterPlayer.css";
+// import"../FooterPlayer/";
 import React, { useEffect, useState, useRef } from "react";
 import { useSearchResults } from "../../context/searchedContext";
 import { useTrackId } from "../tracks/details and tracks/tracks/trackidContext";

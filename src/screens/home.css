@@ -29,6 +29,7 @@
     background: #3e3d3d;
   }
 
+  /* playlist css */
   
 .playlist-container {
   display: grid;
@@ -96,3 +97,142 @@
 .playlist-item:hover{
   background-color: #343333;
 }
+
+
+/* footer css */
+
+
+.custom-audio-player {
+  background-color:  #121212;
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* position: fixed;
+  bottom: 0px; */
+  width: 100%;
+  height: 180px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+
+}
+
+.control-button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.play-pause-button {
+ color: #f2f9f5;
+ background-color: transparent;
+  border-radius: 50%;
+  font-size: 50px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  outline: none;
+  border: none;
+}
+
+.play-pause-button:hover {
+  transform: scale(1.2);
+}
+
+.play-pause-button .FaPlay,
+.play-pause-button .FaPause {
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+.current-track {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  flex:1;
+  justify-content: space-evenly;
+}
+.controls-and-audio{
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+   gap: 10px;
+}
+
+
+.track-details {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.upcoming-tracks {
+  text-align: left;
+  margin-top: 20px;
+  margin-left: 20px;
+  flex: 1.4
+
+}
+
+h4 {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+}
+.upcoming-tracks ul li span{
+  margin-right: 20px;
+}
+
+
+.audio-progress {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 30px;
+
+}
+
+.current-time , .duration{
+  margin: 10px;
+}
+
+.progress-bar {
+  flex-grow: 1;
+  height: 4px;
+  background-color: #555;
+  position: relative;
+  
+  
+}
+
+.progress {
+  height: 100%;
+  width: 0;
+  background-color: white;
+}
+
+  
