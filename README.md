@@ -1,7 +1,13 @@
  # Spotify clone  Website 
 live demo:  https://hulkappecoomerce.netlify.app/
 
-Welcome to the HulkApps E-commerce Website repository! This project is a React application built with ReactJs, HTML5, CSS, Redux , showcasing a shopping cart functionality using Redux Toolkit.
+
+Welcome to my Spotify clone repository! This project is a React application built with ReactJs, HTML5, CSS, routes having functinalities of:-
+1) genre wise music bifirgation
+2) playlist, album tracks  based on search functionality
+3) rendering user playlist based on their login
+4) routing implimentation for single page application
+5) a working audio player is introduced having play pause next previous and upcoming tracks functionalities
 
 ## Tech Stack
 
@@ -9,6 +15,7 @@ Welcome to the HulkApps E-commerce Website repository! This project is a React a
 - **Vite (v5.0.8):** A build tool that aims to provide a faster and more efficient development experience.
 - **React Axios (v2.0.6):** A lightweight wrapper around Axios for making HTTP requests in React applications.
 - **React Icons (v4.12.0):** A popular library for including SVG icons in React projects.
+- **"react-router-dom": "^5.3.4"** implimenting single page application.
 
 ## Project Setup
 
