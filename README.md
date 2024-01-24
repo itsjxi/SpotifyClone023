@@ -1,5 +1,5 @@
  # Spotify clone  Website 
-live demo:  https://hulkappecoomerce.netlify.app/
+live demo:  https://musicappspotify023.netlify.app/
 
 
 Welcome to my Spotify clone repository! This project is a React application built with ReactJs, HTML5, CSS, routes having functinalities of:-
