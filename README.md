@@ -1,4 +1,4 @@
- # Spotify clone  Website 
+ # Spotify Clone  Website 
 live demo:  https://musicappspotify023.netlify.app/
 
 
