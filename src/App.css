@@ -1,0 +1,50 @@
+/* App Layout Styles */
+.app {
+  min-height: 100vh;
+  background: var(--bg-primary);
+}
+
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  padding-top: 80px; /* Header height */
+}
+
+@media (max-width: 480px) {
+  .app-layout {
+    padding-top: 50px; /* Mobile header height */
+  }
+}
+
+.main-content {
+  flex: 1;
+  overflow-y: auto;
+  transition: all var(--transition-normal);
+}
+
+.main-content.with-sidebar {
+  margin-left: var(--sidebar-width);
+}
+
+@media (max-width: 1024px) {
+  .main-content.with-sidebar {
+    margin-left: var(--sidebar-width-md);
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content.with-sidebar {
+    margin-left: var(--sidebar-width-sm);
+  }
+  
+
+}
+
+@media (max-width: 480px) {
+  .main-content.with-sidebar {
+    margin-left: 0;
+    margin-top: 35px;
+  }
+  
+
+}

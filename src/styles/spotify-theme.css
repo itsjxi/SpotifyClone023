@@ -1,0 +1,245 @@
+/* Spotify-inspired Theme System */
+:root {
+  /* Spotify Brand Colors */
+  --spotify-green: #1db954;
+  --spotify-black: #191414;
+  --spotify-dark-gray: #121212;
+  --spotify-gray: #535353;
+  --spotify-light-gray: #b3b3b3;
+  --spotify-white: #ffffff;
+  
+  /* Base spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  
+  /* Border radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 50px;
+  
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.2);
+  --shadow-xl: 0 16px 32px rgba(0, 0, 0, 0.25);
+}
+
+/* Dark Theme (Default Spotify) */
+[data-theme="dark"] {
+  --bg-primary: var(--spotify-black);
+  --bg-secondary: var(--spotify-dark-gray);
+  --bg-tertiary: #282828;
+  --bg-hover: #2a2a2a;
+  --bg-active: #3e3e3e;
+  
+  --text-primary: var(--spotify-white);
+  --text-secondary: var(--spotify-light-gray);
+  --text-muted: var(--spotify-gray);
+  
+  --border-primary: #2e2e2e;
+  --border-secondary: #404040;
+  
+  --accent-primary: var(--spotify-green);
+  --accent-hover: #1ed760;
+  --accent-active: #169c46;
+}
+
+/* Light Theme */
+[data-theme="light"] {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-tertiary: #e9ecef;
+  --bg-hover: #f1f3f4;
+  --bg-active: #e8eaed;
+  
+  --text-primary: #212529;
+  --text-secondary: #6c757d;
+  --text-muted: #adb5bd;
+  
+  --border-primary: #dee2e6;
+  --border-secondary: #ced4da;
+  
+  --accent-primary: var(--spotify-green);
+  --accent-hover: #1ed760;
+  --accent-active: #169c46;
+}
+
+/* Accent Color Variations */
+[data-accent="green"] {
+  --accent-primary: #1db954;
+  --accent-hover: #1ed760;
+  --accent-active: #169c46;
+}
+
+[data-accent="blue"] {
+  --accent-primary: #1e3a8a;
+  --accent-hover: #3b82f6;
+  --accent-active: #1d4ed8;
+}
+
+[data-accent="purple"] {
+  --accent-primary: #7c3aed;
+  --accent-hover: #8b5cf6;
+  --accent-active: #6d28d9;
+}
+
+[data-accent="red"] {
+  --accent-primary: #dc2626;
+  --accent-hover: #ef4444;
+  --accent-active: #b91c1c;
+}
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Circular Std', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color var(--transition-normal), color var(--transition-normal);
+  overflow-x: hidden;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-muted);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+/* Utility Classes */
+.spotify-green {
+  color: var(--spotify-green);
+}
+
+.text-primary {
+  color: var(--text-primary);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.bg-primary {
+  background-color: var(--bg-primary);
+}
+
+.bg-secondary {
+  background-color: var(--bg-secondary);
+}
+
+.hover-bg:hover {
+  background-color: var(--bg-hover);
+}
+
+.transition-all {
+  transition: all var(--transition-fast);
+}
+
+/* Button Styles */
+.btn-primary {
+  background-color: var(--accent-primary);
+  color: white;
+  border: none;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+  transform: scale(1.04);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-primary);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-secondary:hover {
+  border-color: var(--text-primary);
+  transform: scale(1.04);
+}
+
+/* Card Styles */
+.card {
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  transition: all var(--transition-fast);
+}
+
+.card:hover {
+  background-color: var(--bg-tertiary);
+}
+
+/* Animation Classes */
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  :root {
+    --spacing-md: 12px;
+    --spacing-lg: 16px;
+    --spacing-xl: 24px;
+  }
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import HomeBasic from "./home/Homebasic";
 import Feed from "./feed";
 import Trendings from "./trendings";
@@ -21,44 +21,35 @@ import ArtistTopTracks from "./searched/ArtistResults/ArtistTracks/ArtistsTopTra
 
 
 export default function Home() {
+    const location = useLocation();
     
-    console.log("hyyy");
+    const renderContent = () => {
+        const path = location.pathname;
+        
+        if (path.includes('/searched')) return <SearchedField />;
+        if (path.includes('/trending')) return <Trendings />;
+        if (path.includes('/playlist/')) return <HomePlayLists />;
+        if (path.includes('/playlistTracks/')) return <PlaylistTracks />;
+        if (path.includes('/artistssongs/')) return <ArtistSongs />;
+        if (path.includes('/track/')) return <MainPlayer />;
+        if (path.includes('/album/')) return <Albumtracks />;
+        if (path.includes('/artist/')) return <ArtistTopTracks />;
+        
+        return <HomeBasic />;
+    };
+    
     return (
-        <TrackIdProvider>
-        <Router>
-             
-           
-        
-        <div className="main_Body">
-            <Sidebar/>
-            <div className="right_SideBar">
-               
-                <Header/>
-                
-               
-                <Switch>
-                          
-                <Route path="/" exact component={HomeBasic} />
-                <Route path="/searched" component={SearchedField} />
-                <Route path="/trending" component={Trendings} />
-                <Route path="/playlist/:categoryId" component={HomePlayLists} />
-                <Route path="/playlistTracks/:playlistId" component={PlaylistTracks} />
-                <Route path="/artistssongs/:artistID" component={ArtistSongs} />
-                <Route path="/track/:TrackID" component={MainPlayer} />
-                <Route path="/album/:AlbumID" component={Albumtracks}/>
-                <Route path="/artist/:artistId" component={ArtistTopTracks}/>
-                </Switch>
-          
-            </div>
-          
-        </div>
-     
-      
-      <FooterPlayer />
-     
-      
-        </Router>
-        </TrackIdProvider>
-        
+        <SearchProvider>
+            <TrackIdProvider>
+                <div className="main_Body">
+                    <Sidebar/>
+                    <div className="right_SideBar">
+                        <Header/>
+                        {renderContent()}
+                    </div>
+                </div>
+                <FooterPlayer />
+            </TrackIdProvider>
+        </SearchProvider>
     );
 }

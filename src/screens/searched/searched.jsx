@@ -4,17 +4,13 @@ import { useSearchResults } from '../../context/searchedContext';
 import axios from 'axios';
 import './searched.css';
 import { PlayButton } from '../../shared/playButton';
-import { Switch, Route, useRouteMatch } from 'react-router-dom';
 import ArtistResults from './ArtistResults/ArtistResults';
 import AlbumResults from './AlbumResults/AlbumResults';
 import HomePlayLists from '../playlists/HomePlaylists';
 import TrackResults from './TracksResults/TracksResults';
-import PlaylistDetails from '../tracks/details and tracks/PlaylistRendeing/playlistdetails';
 import SearchType from './searchedType/seachType';
-import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
 
 export default function SearchedField() {
-  const { path } = useRouteMatch();
   const { searchKey, searchType } = useSearchResults();
   const [searchData, setSearchedData] = useState([]);
   const [hoveredIndex, setHoveredIndex] = useState(null);

@@ -1,0 +1,133 @@
+.landing-page {
+  min-height: 100vh;
+  background: var(--bg-primary);
+  padding: var(--space-xl);
+}
+
+.landing-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.landing-logo {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  margin: 0;
+}
+
+.landing-hero {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: var(--text-5xl);
+  font-weight: 700;
+  margin: 0 0 var(--space-lg) 0;
+  line-height: 1.2;
+}
+
+.hero-description {
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+  margin: 0 auto var(--space-xl) auto;
+  max-width: 600px;
+}
+
+.hero-cta {
+  font-size: var(--text-lg);
+  padding: var(--space-lg) var(--space-xl);
+  box-shadow: var(--shadow-glow);
+}
+
+.landing-tracks {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tracks-title {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 var(--space-xl) 0;
+}
+
+.tracks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-lg);
+}
+
+.track-cover {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: var(--space-md);
+}
+
+.track-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.play-overlay {
+  position: absolute;
+  bottom: var(--space-sm);
+  right: var(--space-sm);
+  width: 56px;
+  height: 56px;
+  background: var(--primary-gradient);
+  border: none;
+  border-radius: var(--radius-full);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+  opacity: 0;
+  transition: all var(--transition-normal);
+}
+
+.track-card:hover .play-overlay {
+  opacity: 1;
+}
+
+.track-info {
+  padding: 0 var(--space-sm);
+}
+
+.track-title {
+  margin: 0 0 var(--space-xs) 0;
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.track-artist {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .landing-page {
+    padding: var(--space-md);
+  }
+  
+  .hero-title {
+    font-size: var(--text-3xl);
+  }
+  
+  .tracks-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
