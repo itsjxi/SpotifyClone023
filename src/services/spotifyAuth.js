@@ -1,6 +1,6 @@
 // Spotify OAuth Configuration (Client-side flow - no client secret needed)
 const SPOTIFY_CLIENT_ID = import.meta.env.VITE_SPOTIFY_CLIENT_ID || '7bdfde888d4c4769a8ea1098483fd0f7';
-const REDIRECT_URI = import.meta.env.VITE_REDIRECT_URI || 'https://musicappspotify023.netlify.app/';
+const REDIRECT_URI = import.meta.env.VITE_REDIRECT_URI || 'https://musicappspotify023.netlify.app/callback';
 const SCOPES = [
   'user-read-private',
   'user-read-email',
